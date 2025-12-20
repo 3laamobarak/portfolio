@@ -80,6 +80,10 @@ This project can be deployed to various platforms:
    - Publish directory: `dist`
 3. Deploy
 
+## 🌍 Live Demo
+
+Visit the live portfolio: [https://portfolio-tau-flame-84.vercel.app/](https://portfolio-tau-flame-84.vercel.app/)
+
 ## 📝 License
 
 This project is open source and available under the MIT License.
