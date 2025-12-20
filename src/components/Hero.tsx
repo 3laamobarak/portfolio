@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Code2, Trophy } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Code2, Trophy, Download } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import cvPdf from "@/assets/Alaa Mobarak Taha Resume.pdf";
 
 const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/in/alaa-mobarak", label: "LinkedIn" },
   { icon: Github, href: "https://github.com/3laamobarak", label: "GitHub" },
   { icon: Code2, href: "https://codeforces.com/profile/3ElWaa", label: "Codeforces" },
   { icon: Trophy, href: "https://leetcode.com/u/3laa_mobarak/", label: "LeetCode" },
-];
+  { icon: Download, href: cvPdf, label: "Download CV", download: "Alaa Mobarak Taha Resume.pdf" },
+] as const;
 
 export function Hero() {
   return (
@@ -76,6 +78,7 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
                   aria-label={link.label}
+                  download={(link as any).download}
                 >
                   <link.icon className="w-5 h-5 text-foreground hover:text-primary transition-colors" />
                 </motion.a>

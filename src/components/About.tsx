@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { GraduationCap, MapPin, Mail, Phone } from "lucide-react";
+import { GraduationCap, MapPin, Mail, Phone, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import cvPdf from "@/assets/Alaa Mobarak Taha Resume.pdf";
 
 export function About() {
   const ref = useRef(null);
@@ -42,6 +44,14 @@ export function About() {
                 Passionate about combining problem-solving expertise, modern development, 
                 and AI integration to build impactful applications.
               </p>
+              <div className="pt-2">
+                <Button asChild variant="default" size="lg">
+                  <a href={cvPdf} download="Alaa Mobarak Taha Resume.pdf" className="inline-flex items-center gap-2">
+                    <Download className="w-4 h-4" />
+                    <span>Download CV</span>
+                  </a>
+                </Button>
+              </div>
             </motion.div>
 
             <motion.div
