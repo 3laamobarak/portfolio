@@ -58,7 +58,8 @@ export function About() {
                   <div>
                     <h3 className="font-semibold">Bachelor's in Computer Science</h3>
                     <p className="text-sm text-muted-foreground">Faculty of Computer and Information Technology, SVU</p>
-                    <p className="text-sm text-primary">2020 - 2024 • Excellent Grade</p>
+                    <p className="text-sm text-primary">2020 - 2024 • Good Grade</p>
+                    <p className="text-sm text-muted-foreground">Graduation Project Grade: Excellent</p>
                   </div>
                 </div>
               </div>

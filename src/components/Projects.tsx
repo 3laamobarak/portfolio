@@ -1,39 +1,78 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, ShoppingCart, Utensils, Heart, Store } from "lucide-react";
+import { Github, ShoppingCart, Utensils, Heart, Store, Globe } from "lucide-react";
 
 const projects = [
   {
+    title: "Storeify",
+    year: "2025",
+    description: "Responsive e-commerce web app integrating FakeStoreAPI with single-page navigation and DOM manipulation.",
+    tech: ["HTML5", "CSS3", "JavaScript", "REST API"],
+    highlights: [
+      "20% reduction in load times",
+      "30% improvement in user interaction",
+      "15% acceleration in team productivity",
+      "Modular JavaScript components"
+    ],
+    icon: Store,
+    github: "https://github.com/elkbany/Storeify",
+    demo: "https://elkbany.github.io/Storeify/HTML/Home.html",
+  },
+  {
+    title: "ECommerce",
+    year: "2025",
+    description: "Desktop e-commerce application using .NET Windows Forms and Entity Framework Core with Onion Architecture.",
+    tech: [".NET WinForms", "Entity Framework Core", "SQL Server", "Onion Architecture"],
+    highlights: [
+      "30% improvement in code maintainability",
+      "25% optimization in data retrieval",
+      "20% boost in delivery efficiency",
+      "Repository pattern implementation"
+    ],
+    icon: ShoppingCart,
+    github: "https://github.com/3laamobarak/ECommerceVC-Project",
+  },
+  {
+    title: "Restaurant",
+    year: "2024",
+    description: "MVC-based restaurant management system with real-time inventory and order tracking, used by 15+ staff daily.",
+    tech: ["ASP.NET MVC", "Entity Framework", "LINQ", "C#"],
+    highlights: [
+      "30% performance optimization",
+      "Real-time inventory tracking",
+      "40% increase in user satisfaction",
+      "Staff workflow optimization"
+    ],
+    icon: Utensils,
+    github: "https://github.com/3laamobarak/Restaurant",
+  },
+  {
     title: "Medica",
     year: "2024",
-    description: "Healthcare platform integrating hospitals, clinics, pharmacies, and labs with booking system and real-time stock checks.",
-    tech: ["ASP.NET Web API", "C#", "Entity Framework", "Clean Architecture"],
-    highlights: ["40% efficiency boost", "50% faster scheduling", "20,000+ daily transactions"],
+    description: "ASP.NET Web API integrating hospitals, clinics, pharmacies, and labs, streamlining cross-facility operations.",
+    tech: ["ASP.NET Web API", "C#", "Entity Framework", "Clean Architecture", "LINQ"],
+    highlights: [
+      "40% boost in efficiency",
+      "50% reduction in scheduling time",
+      "35% improvement in prescription accuracy",
+      "20,000+ daily transactions"
+    ],
     icon: Heart,
+    github: "https://github.com/3laamobarak/MedicalSystem",
   },
   {
-    title: "Restaurant Management",
-    year: "2024",
-    description: "MVC-based restaurant system with real-time inventory tracking and staff management, used by 15+ staff daily.",
-    tech: ["ASP.NET MVC", "Entity Framework", "LINQ", "C#"],
-    highlights: ["30% performance boost", "Real-time inventory", "40% user satisfaction increase"],
-    icon: Utensils,
-  },
-  {
-    title: "Ecommerce Desktop",
-    year: "2025",
-    description: "Desktop e-commerce application using .NET Windows Forms with Onion Architecture and Repository patterns.",
-    tech: [".NET WinForms", "Entity Framework Core", "SQL Server", "Onion Architecture"],
-    highlights: ["30% better maintainability", "25% faster data retrieval", "20% delivery efficiency"],
-    icon: ShoppingCart,
-  },
-  {
-    title: "Storeify",
-    year: "2024",
-    description: "Responsive e-commerce web app with FakeStoreAPI integration, single-page navigation, and modular components.",
-    tech: ["HTML5", "CSS3", "JavaScript", "REST API"],
-    highlights: ["20% faster load times", "30% better interaction", "15% team productivity boost"],
-    icon: Store,
+    title: "MeeM",
+    year: "2022",
+    description: "Static e-commerce web page with responsive UI design ensuring 100% cross-device compatibility.",
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    highlights: [
+      "30% increase in user engagement",
+      "100% cross-device compatibility",
+      "40% reduction in bounce rate",
+      "Enhanced navigation and interactivity"
+    ],
+    icon: Globe,
+    github: "https://github.com/3laamobarak/Meem",
   },
 ];
 
@@ -77,6 +116,28 @@ export function Projects() {
                       <h3 className="text-xl font-bold">{project.title}</h3>
                       <span className="text-sm text-muted-foreground font-mono">{project.year}</span>
                     </div>
+                  </div>
+                  <div className="flex gap-2">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors group/icon"
+                      >
+                        <Github className="w-5 h-5 text-primary" />
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors group/icon"
+                      >
+                        <Globe className="w-5 h-5 text-primary" />
+                      </a>
+                    )}
                   </div>
                 </div>
 
