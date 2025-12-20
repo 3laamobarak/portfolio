@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Phone, MapPin, Linkedin, Github, Code2, Trophy, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, Code2, Trophy, Send, Download, FileText } from "lucide-react";
+import cvPdf from "@/assets/Alaa Mobarak Taha Resume.pdf";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "3laa.m0o0barak@gmail.com", href: "mailto:3laa.m0o0barak@gmail.com" },
@@ -13,6 +14,7 @@ const socialLinks = [
   { icon: Github, label: "GitHub", href: "https://github.com/3laamobarak", color: "hover:text-foreground" },
   { icon: Code2, label: "Codeforces", href: "https://codeforces.com/profile/3ElWaa", color: "hover:text-[#1F8ACB]" },
   { icon: Trophy, label: "LeetCode", href: "https://leetcode.com/u/3laa_mobarak/", color: "hover:text-[#FFA116]" },
+  { icon: FileText, label: "CV", href: cvPdf, color: "hover:text-primary", download: "Alaa Mobarak Taha Resume.pdf" },
 ];
 
 export function Contact() {
@@ -73,8 +75,9 @@ export function Contact() {
                       <motion.a
                         key={link.label}
                         href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target={link.download ? undefined : "_blank"}
+                        rel={link.download ? undefined : "noopener noreferrer"}
+                        download={link.download}
                         className={`p-4 rounded-xl bg-secondary hover:shadow-glow transition-all duration-300 ${link.color}`}
                         whileHover={{ scale: 1.1, y: -3 }}
                         whileTap={{ scale: 0.95 }}

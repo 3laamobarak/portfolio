@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Code2, Trophy, Download } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Code2, Trophy, Download, FileText } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import cvPdf from "@/assets/Alaa Mobarak Taha Resume.pdf";
 
@@ -8,7 +8,7 @@ const socialLinks = [
   { icon: Github, href: "https://github.com/3laamobarak", label: "GitHub" },
   { icon: Code2, href: "https://codeforces.com/profile/3ElWaa", label: "Codeforces" },
   { icon: Trophy, href: "https://leetcode.com/u/3laa_mobarak/", label: "LeetCode" },
-  { icon: Download, href: cvPdf, label: "Download CV", download: "Alaa Mobarak Taha Resume.pdf" },
+  { icon: FileText, href: cvPdf, label: "Download CV", download: "Alaa Mobarak Taha Resume.pdf" },
 ] as const;
 
 export function Hero() {
