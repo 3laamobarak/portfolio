@@ -44,7 +44,7 @@ const projects = [
       "Staff workflow optimization"
     ],
     icon: Utensils,
-    github: "https://github.com/3laamobarak/Restaurant",
+    github: "https://github.com/3laamobarak/Restaurant/tree/master",
   },
   {
     title: "Medica",
