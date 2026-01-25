@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Github, ShoppingCart, Utensils, Heart, Store, Globe } from "lucide-react";
+import { Github, ShoppingCart, Utensils, Heart, Store, Globe, Code } from "lucide-react";
 
 const projects = [
   {
@@ -17,6 +17,21 @@ const projects = [
     icon: Store,
     github: "https://github.com/elkbany/Storeify",
     demo: "https://elkbany.github.io/Storeify/HTML/Home.html",
+  },
+  {
+    title: "Base Repository – Clean Architecture",
+    year: "2025",
+    description: "Professional .NET 8 backend foundation built with Clean Architecture, Generic Repository, Unit of Work, JWT Auth, Stripe Payments, AI Chatbot, Image Compression, and OTP Verification.",
+    tech: [".NET 8", "Clean Architecture", "EF Core", "JWT", "Stripe.net", "OpenRouter AI"],
+    highlights: [
+      "Strict layer separation for maximum maintainability",
+      "UnitOfWork + Generic Repository pattern",
+      "Full Stripe payment flow (save card, refund, history)",
+      "AI chatbot with persistent conversation history",
+      "Image/PDF upload with GZip compression"
+    ],
+    icon: Code,
+    github: "https://github.com/3laamobarak/Base-Repository-.Net",
   },
   {
     title: "ECommerce",
@@ -94,7 +109,6 @@ export function Projects() {
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-16">
             A selection of projects I've worked on
           </p>
-
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <motion.div
@@ -106,7 +120,7 @@ export function Projects() {
                 whileHover={{ y: -5 }}
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all duration-500" />
-                
+
                 <div className="flex items-start justify-between mb-4 relative">
                   <div className="flex items-center gap-3">
                     <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
