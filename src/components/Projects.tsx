@@ -34,6 +34,37 @@ const projects = [
     github: "https://github.com/3laamobarak/Base-Repository-.Net",
   },
   {
+    title: "iHerb Backend",
+    year: "2026",
+    description: "Scalable .NET 8 RESTful API built with Clean Architecture, Unit of Work & Repository Pattern for a gym supplements and healthy products e-commerce platform.",
+    tech: [".NET 8", "Clean Architecture", "EF Core", "JWT", "Stripe", "SignalR", "Swagger"],
+    highlights: [
+      "JWT Authentication with OTP email verification",
+      "Full Stripe Payment Gateway integration",
+      "Real-time notifications using SignalR",
+      "Well-documented REST API with Swagger",
+      "Seamless integration with Angular frontend"
+    ],
+    icon: Code,
+    github: "https://github.com/3laamobarak/ITI-Final-Project/tree/master/Company.Project",
+  },
+  {
+    title: "iHerb Frontend",
+    year: "2026",
+    description: "Modern Angular e-commerce application with search, filtering, shopping cart, checkout, and real-time chat bot connected to .NET backend.",
+    tech: ["Angular", "TypeScript", "RxJS", "SignalR", "Tailwind CSS", "Reactive Forms"],
+    highlights: [
+      "Advanced product search & filtering",
+      "Fully functional shopping cart & checkout",
+      "Protected routes with Angular Guards",
+      "Real-time chat bot using SignalR",
+      "Responsive design with smooth UX"
+    ],
+    icon: ShoppingCart,
+    github: "https://github.com/3laamobarak/ITI.Final.Front",
+    // Add demo link later when you deploy it
+  },
+  {
     title: "ECommerce",
     year: "2025",
     description: "Desktop e-commerce application using .NET Windows Forms and Entity Framework Core with Onion Architecture.",
