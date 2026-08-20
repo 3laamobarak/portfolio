@@ -125,6 +125,15 @@
     box-shadow: var(--shadow-glow);
   }
 
+  .animate-pulse-dot {
+    animation: pulse-dot 1.6s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 hsl(160 84% 39% / 0.5); }
+    50% { opacity: 0.6; box-shadow: 0 0 0 4px hsl(160 84% 39% / 0); }
+  }
+
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
